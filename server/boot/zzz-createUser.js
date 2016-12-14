@@ -8,6 +8,7 @@ module.exports = function(server, next) {
   })
   .then(function(token) {
     console.log(token);
+    server.set('accessToken', token);
     next();
   })
   .catch(function(err) {
